@@ -9,8 +9,14 @@ La partita può essere interrotta perdendo però 0.5 punti, ma potendoli riguada
 In qualsiasi momento si può visuallizare lo storico delle mosse delle partite assocciate all'utente.<br>
 Se si è admin è possibile visualizzare la lista degli utenti.<br>
 
+
+
 ## Diagrammi UML
 
+Di seguito viene mostrato il diaframma dei casi d'suo
+
 ![Casi d'uso](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Di seguito vengono mostrati i diagrammi delle sequenze con la spiegazione delle rotte
 
 

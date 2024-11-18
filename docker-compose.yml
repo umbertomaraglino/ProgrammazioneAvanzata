@@ -18,7 +18,6 @@ services:
       - db
     volumes:
       - ./:/src/app
-    #command: /bin/sh -c "/src/app/wait.sh db && npm run dev"
 
   db:
     container_name: db_mysql

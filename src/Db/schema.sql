@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     tokens FLOAT NOT NULL,
-    points FLOAT NOT NULL,
+    points FLOAT NOT NULL DEFAULT 0,
     isadmin BOOLEAN NOT NULL
 );
 

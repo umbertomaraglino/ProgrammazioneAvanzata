@@ -1,18 +1,25 @@
-#!/bin/sh
-# wait until MySQL is really available
-maxcounter=1000
+#!/bin/bash
 
-host="$1"
-port=3306  # Usa la porta corretta se necessario
+# Parametri di connessione al DB
+DB_HOST="db"  # Nome del container del database (o l'IP se non usi Docker)
+DB_PORT="3306"  # Porta del database (modifica secondo il tipo di DB)
 
-counter=1
-while ! mysql --protocol TCP -h "$host" -P "$port" -u"$DB_USER" -p"$DB_PASSWORD" -e "show databases;" > /dev/null 2>&1; do
-    echo "Attempt $counter: $host, $DB_USER, $DB_PASSWORD"
-    sleep 3  # Aumentato il tempo di attesa per ogni tentativo
-    counter=`expr $counter + 1`
-    if [ $counter -gt $maxcounter ]; then
-        >&2 echo "We have been waiting for MySQL too long already; failing."
-        exit 1
-    fi;
+# Tempo di attesa tra i tentativi (in secondi)
+WAIT_TIME=2
+
+# Limite di tentativi (numero massimo di volte che proverà a connettersi)
+MAX_RETRIES=30
+
+# Controlla se il database è pronto
+echo "Attendo che il database sia pronto..."
+
+for i in $(seq 1 $MAX_RETRIES); do
+  # Prova a connettersi al database usando nc
+  nc -z "$DB_HOST" "$DB_PORT" && break
+  echo "Tentativo $i di $MAX_RETRIES: il database non è pronto, attendo $WAIT_TIME secondi..."
+  sleep $WAIT_TIME
 done
-echo "MySQL is ready!"
+
+# Se il database è pronto, avvia l'app
+echo "Il database è pronto, avvio l'app!"
+exec "$@"

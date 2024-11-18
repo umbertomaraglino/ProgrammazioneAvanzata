@@ -1,19 +1,15 @@
 
-
+#src/app/src/app.ts
 FROM node:20
 
 WORKDIR /src/app
-
 COPY package*.json ./
-
 RUN npm install
-RUN npm install -g nodemon
 RUN npm install -g ts-node
-COPY wait.sh /src/app/wait.sh
-RUN chmod +x /src/app/wait.sh
 
+COPY . .
 
 EXPOSE 3000
 
-#CMD ["npm", "run", "dev"]
+#CMD ["npm", "run", "dev"] rahmi
 CMD ["ts-node", "src/app.ts"]
