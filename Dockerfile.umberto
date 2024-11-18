@@ -15,5 +15,5 @@ RUN chmod +x /src/app/wait.sh
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]#
+#CMD ["npm", "run", "dev"]
 CMD ["ts-node", "src/app.ts"]
