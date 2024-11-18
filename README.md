@@ -11,6 +11,6 @@ Se si è admin è possibile visualizzare la lista degli utenti.<br>
 
 ## Diagrammi UML
 
-![Casi d'uso](./immagini/immagine.png)
+![Casi d'uso](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
 
 
