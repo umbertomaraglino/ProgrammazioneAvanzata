@@ -67,8 +67,6 @@ export const checkPasswordMatch = async (req: Request, res: Response, next: Next
 export const checkToken = async (req: Request, res: Response, next: NextFunction) => {
     const user = await getUserFromJwt(req);
     const tokens = user[0].dataValues.tokens;
-    const game = await findGamesfromUser(user[0].dataValues.user_id);
-    const status = JSON.parse(game.dataValues.status);
     if (req.path === '/play') {
         if (tokens >= 0.25) {
             next();
@@ -76,6 +74,8 @@ export const checkToken = async (req: Request, res: Response, next: NextFunction
             return res.status(400).json({ message: "Credito non sufficiente per giocare." });
         }
     } else if (req.path === '/move') {
+        const game = await findGamesfromUser(user[0].dataValues.user_id);
+        const status = game.dataValues.stato;
         if (tokens >= 0.0125) {
             next();
         }

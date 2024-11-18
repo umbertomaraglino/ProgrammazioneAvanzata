@@ -6,10 +6,14 @@ WORKDIR /src/app
 
 COPY package*.json ./
 
+RUN npm install
+RUN npm install -g nodemon
+RUN npm install -g ts-node
 COPY wait.sh /src/app/wait.sh
 RUN chmod +x /src/app/wait.sh
 
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev"]#
+CMD ["ts-node", "src/app.ts"]

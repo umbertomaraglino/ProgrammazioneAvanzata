@@ -26,8 +26,9 @@ export async function findHistory(userID: number): Promise<any> {
         where: {
             user_id: userID, 
         },
-        attributes: ['storico'],  
+        attributes: ['game_id', 'storico'],  
     });
+    
     return game[0].dataValues.storico
 };
 
