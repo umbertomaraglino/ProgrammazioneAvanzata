@@ -13,10 +13,126 @@ Se si è admin è possibile visualizzare la lista degli utenti.<br>
 
 ## Diagrammi UML
 
+### Casi d'uso
+
 Di seguito viene mostrato il diaframma dei casi d'suo
 
 ![Casi d'uso](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
 
 Di seguito vengono mostrati i diagrammi delle sequenze con la spiegazione delle rotte
 
+### Register
+
+![Register](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Il body deve essere costruito con email e password:
+
+![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![RegisterS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Login
+
+![Login](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Il body deve essere costruito con email e password:
+
+![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![LoginS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Users
+
+![Users](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![UsersS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Refresh token
+
+![RefreshToken](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Il body deve essere costruito con email e numero token da aggiungere:
+
+![RefreshToken2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![refreshTokenS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Play
+
+![play](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Il body deve essere costruito con la difficoltà:
+
+![play2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![playS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Move
+
+![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Il body deve essere costruito con il numero della mossa:
+
+![move2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![moveS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+Se la mossa non sarà valida verrà restituita la lista delle mosse valide:
+
+![moveR](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+
+### History
+
+![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![historyS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### State
+
+![state](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![stateS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+### Quit
+
+![quit](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+In caso di successo della richiesta si otterrà:
+
+![quitS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+
+## Pattern utilizzati
+Di seguito verranno elencati i pattern utilzizati e le motivazioni
+
+### MVC
+Nel pattern MVC, le rotte sono un punto di ingresso che instrada le richieste verso il componente appropriato del sistema. Le rotte mappano gli URL a specifici controller, che si trovano nella parte Controller del pattern. Quando un utente invia una richiesta HTTP, il router analizza l'URL e decide quale controller e quale azione richiamare. Questo controller, a sua volta, interagisce con il modello per recuperare i dati necessari e con la vista per renderizzarli.
+
+### Singleton
+Il Singleton garantisce che ci sia un'unica istanza della connessione al database in tutto il ciclo di vita dell'applicazione. Questo è fondamentale per risparmiare risorse e gestire meglio le connessioni. In pratica, si crea una classe responsabile della connessione che, quando invocata, restituisce sempre la stessa istanza.
+
+Quando il controller ha bisogno di accedere ai dati, utilizza il modello, il quale a sua volta utilizza la connessione fornita dal Singleton. La prima volta che il modello chiede una connessione, il Singleton la crea; le volte successive restituisce l'istanza già creata. Questo meccanismo assicura che non vengano aperte connessioni ridondanti al database.
+
+### Chain of responsability
+La Chain of Responsibility si realizza nei middleware, che sono componenti indipendenti che si occupano di controlli specifici lungo il flusso di una richiesta. Quando una richiesta arriva all'applicazione, passa attraverso una catena di middleware, ognuno dei quali può elaborarla, modificarla o decidere di fermarla.
+
+Ad esempio, un middleware potrebbe controllare l'autenticazione, un altro la validità dei dati della richiesta, e un altro ancora i permessi. Se uno di questi middleware rileva un problema, blocca la catena e restituisce immediatamente una risposta all'utente. In caso contrario, la richiesta viene inoltrata al middleware successivo fino a raggiungere il controller.
+
+Questa struttura consente di mantenere il codice modulare e riutilizzabile, dato che ogni middleware ha una responsabilità ben definita.
 

@@ -44,7 +44,7 @@ app.post("/login", jsonParser, checkEmail, checkPassword, checkUserRegistered, c
   login(req, res);
 });
 
-app.put('/refreshtoken', jsonParser, checkIsAdmin, checkEmail, checkUserRegistered, checkCredits, (req: Request, res: Response) => {
+app.put('/refreshtoken', jsonParser, checkJwt, checkIsAdmin, checkEmail, checkUserRegistered, checkCredits, (req: Request, res: Response) => {
   updateTokens(req, res);
 });
 

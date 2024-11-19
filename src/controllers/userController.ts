@@ -50,9 +50,8 @@ export const login = async (req: Request, res: Response) => {
 
 //imposta i token a 100 di un utente
 export const updateTokens = async (req: Request, res: Response) => {
-  const tokens = req.body.tokens;
   try {
-      await updateTokensDb(req.body.email,tokens);
+      await updateTokensDb(req.body.email,req.body.tokens);
       return res.status(200).json({ message: 'Token aggiornati con successo'});
 
   } catch (e) {

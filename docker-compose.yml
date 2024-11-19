@@ -15,9 +15,9 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
     depends_on:
-      - db
-    volumes:
-      - ./:/src/app
+      db:
+        condition: service_healthy
+
 
   db:
     container_name: db_mysql
@@ -29,3 +29,8 @@ services:
       - "3307:3306"
     volumes:
       - ./src/Db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p${DB_PASSWORD} || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 50

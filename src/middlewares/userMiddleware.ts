@@ -74,13 +74,8 @@ export const checkToken = async (req: Request, res: Response, next: NextFunction
             return res.status(400).json({ message: "Credito non sufficiente per giocare." });
         }
     } else if (req.path === '/move') {
-        const game = await findGamesfromUser(user[0].dataValues.user_id);
-        const status = game.dataValues.stato;
         if (tokens >= 0.0125) {
             next();
-        }
-        else if(status == "playing"){
-            next()
         }
         else {
             return res.status(401).json({ message: "Credito non sufficiente per la mossa." });
