@@ -131,12 +131,16 @@ Il Singleton garantisce che ci sia un'unica istanza della connessione al databas
 
 Quando il controller ha bisogno di accedere ai dati, utilizza il modello, il quale a sua volta utilizza la connessione fornita dal Singleton. La prima volta che il modello chiede una connessione, il Singleton la crea; le volte successive restituisce l'istanza già creata. Questo meccanismo assicura che non vengano aperte connessioni ridondanti al database.
 
+![singleton](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/singleton.png)
+
 ### Chain of responsability
 La Chain of Responsibility si realizza nei middleware, che sono componenti indipendenti che si occupano di controlli specifici lungo il flusso di una richiesta. Quando una richiesta arriva all'applicazione, passa attraverso una catena di middleware, ognuno dei quali può elaborarla, modificarla o decidere di fermarla.
 
 Ad esempio, un middleware potrebbe controllare l'autenticazione, un altro la validità dei dati della richiesta, e un altro ancora i permessi. Se uno di questi middleware rileva un problema, blocca la catena e restituisce immediatamente una risposta all'utente. In caso contrario, la richiesta viene inoltrata al middleware successivo fino a raggiungere il controller.
 
-Questa struttura consente di mantenere il codice modulare e riutilizzabile, dato che ogni middleware ha una responsabilità ben definita.
+Come si vede nel seguente esempio, all'avvio della rotta saranno effettuati tutti i controlli necessari seguendo appunto il pattern chain of responsability
+
+![Chain](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/chain.png)
 
 ## Avvio
 Per avviare il progetto bisogna scaricare il seguente github tramite:
