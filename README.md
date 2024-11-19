@@ -59,11 +59,11 @@ In caso di successo della richiesta si otterrà:
 
 Il body deve essere costruito con email e numero token da aggiungere:
 
-![RefreshToken2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refreshtoken2.png)
+![RefreshToken2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refershtokens2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![refreshTokenS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refreshtokenS.png)
+![refreshTokenS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refershtokenS.png)
 
 ### Play
 
