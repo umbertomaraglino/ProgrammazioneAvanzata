@@ -47,76 +47,76 @@ In caso di successo della richiesta si otterrà:
 
 ### Users
 
-![Users](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Users](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Users.png)
 
 In caso di successo della richiesta si otterrà:
 
-![UsersS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![UsersS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/UsersS.png)
 
 ### Refresh token
 
-![RefreshToken](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![RefreshToken](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/RefreshTokens.png)
 
 Il body deve essere costruito con email e numero token da aggiungere:
 
-![RefreshToken2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![RefreshToken2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refreshtoken2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![refreshTokenS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![refreshTokenS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/refreshtokenS.png)
 
 ### Play
 
-![play](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![play](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Play.png)
 
 Il body deve essere costruito con la difficoltà:
 
-![play2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![play2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/play2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![playS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![playS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/playS.png)
 
 ### Move
 
-![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Move.png)
 
 Il body deve essere costruito con il numero della mossa:
 
-![move2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![move2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/move2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![moveS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![moveS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/moves.png)
 
 Se la mossa non sarà valida verrà restituita la lista delle mosse valide:
 
-![moveR](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![moveR](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/mover.png)
 
 
 ### History
 
-![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Move](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/History.png)
 
 In caso di successo della richiesta si otterrà:
 
-![historyS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![historyS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/historys.png)
 
 ### State
 
-![state](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![state](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/State.png)
 
 In caso di successo della richiesta si otterrà:
 
-![stateS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![stateS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/stateS.png)
 
 ### Quit
 
-![quit](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![quit](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Quit.png)
 
 In caso di successo della richiesta si otterrà:
 
-![quitS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![quitS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/quitS.png)
 
 ## Pattern utilizzati
 Di seguito verranno elencati i pattern utilzizati e le motivazioni
