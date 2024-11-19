@@ -124,6 +124,14 @@ Di seguito verranno elencati i pattern utilzizati e le motivazioni
 ### MVC
 Nel pattern MVC, le rotte sono un punto di ingresso che instrada le richieste verso il componente appropriato del sistema. Le rotte mappano gli URL a specifici controller, che si trovano nella parte Controller del pattern. Quando un utente invia una richiesta HTTP, il router analizza l'URL e decide quale controller e quale azione richiamare. Questo controller, a sua volta, interagisce con il modello per recuperare i dati necessari e con la vista per renderizzarli.
 
+- **/src**: La cartella principale del progetto.
+  - **/controller**: Contiene i controller che gestiscono la logica delle richieste.
+    - `gameController.js`: Gestisce la logica per il gioco.
+    - `userController.js`: Gestisce la logica per l'utente.
+  - **/model**: Contiene i modelli che definiscono la struttura dei dati e le interazioni con il database.
+    - `gameModel.js`: Modello di dati per il gioco.
+    - `userModel.js`: Modello di dati per l'utente.
+
 ### Singleton
 Il Singleton garantisce che ci sia un'unica istanza della connessione al database in tutto il ciclo di vita dell'applicazione. Questo è fondamentale per risparmiare risorse e gestire meglio le connessioni. In pratica, si crea una classe responsabile della connessione che, quando invocata, restituisce sempre la stessa istanza.
 
