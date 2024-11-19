@@ -136,3 +136,18 @@ Ad esempio, un middleware potrebbe controllare l'autenticazione, un altro la val
 
 Questa struttura consente di mantenere il codice modulare e riutilizzabile, dato che ogni middleware ha una responsabilità ben definita.
 
+## Avvio
+Per avviare il progetto bisogna scaricare il seguente github tramite:
+
+```bash
+git clone https://github.com/umbertomaraglino/ProgrammazioneAvanzata
+```
+e successivamente avvaire il docker compose tramite il comando:
+
+```bash
+docker-compose up --build
+```
+
+## Autore
+Umberto Maraglino
+
