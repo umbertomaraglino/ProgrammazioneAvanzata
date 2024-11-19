@@ -17,33 +17,33 @@ Se si è admin è possibile visualizzare la lista degli utenti.<br>
 
 Di seguito viene mostrato il diaframma dei casi d'suo
 
-![Casi d'uso](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Casi d'uso](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/casiduso.png)
 
 Di seguito vengono mostrati i diagrammi delle sequenze con la spiegazione delle rotte
 
 ### Register
 
-![Register](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Register](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Register.png)
 
 Il body deve essere costruito con email e password:
 
-![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/register2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![RegisterS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![RegisterS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/registerS.png)
 
 ### Login
 
-![Login](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Login](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/Login.png)
 
 Il body deve essere costruito con email e password:
 
-![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![Register2](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/register2.png)
 
 In caso di successo della richiesta si otterrà:
 
-![LoginS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/immagine.png)
+![LoginS](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/LoginS.png)
 
 ### Users
 
