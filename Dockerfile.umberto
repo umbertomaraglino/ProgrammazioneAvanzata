@@ -3,6 +3,7 @@ FROM node:20
 
 COPY package*.json ./
 RUN npm install -g ts-node
+#RUN npm install -g nodemon
 
 COPY . .
 
@@ -10,5 +11,5 @@ COPY . .
 
 EXPOSE 3000
 
-#CMD ["npm", "run", "dev"] rahmi
+#CMD ["npm", "run", "dev"]
 CMD ["ts-node", "src/app.ts"]

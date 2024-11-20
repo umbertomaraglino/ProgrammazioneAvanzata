@@ -3,9 +3,11 @@ import { gameModel } from '../models/gameModel';
 import { Request } from "express";
 
 
+
 //crea una partita nella tabella game
 export async function createGameDb(req: Request, user: IntegerDataType, draughts: any, diff: number ): Promise<any> {
     const stato: string = draughts.status;
+
     const newGameState = {
         data : draughts.engine.data,
         history: draughts.history
