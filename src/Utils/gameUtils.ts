@@ -1,8 +1,7 @@
 
 import { Request, Response } from "express";
-import { DraughtsPlayer, DraughtsStatus } from 'rapid-draughts';
+import { DraughtsPlayer} from 'rapid-draughts';
 import {
-  EnglishDraughts as Draughts,
   EnglishDraughtsComputerFactory as ComputerFactory,
 } from 'rapid-draughts/english';
 import { updateStatusDb } from "../Db/gameQueries";

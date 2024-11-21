@@ -71,7 +71,7 @@ export const checkToken = async (req: Request, res: Response, next: NextFunction
         if (tokens >= 0.25) {
             next();
         } else {
-            return res.status(400).json({ message: "Credito non sufficiente per giocare." });
+            return res.status(401).json({ message: "Credito non sufficiente per giocare." });
         }
     } else if (req.path === '/move') {
         if (tokens >= 0.0125) {

@@ -1,6 +1,7 @@
 import { IntegerDataType } from 'sequelize';
 import { gameModel } from '../models/gameModel';
 import { Request } from "express";
+import { BoardObjInterface } from '../Utils/historyUtils';
 
 
 
@@ -8,7 +9,7 @@ import { Request } from "express";
 export async function createGameDb(req: Request, user: IntegerDataType, draughts: any, diff: number ): Promise<any> {
     const stato: string = draughts.status;
 
-    const newGameState = {
+    const newGameState: BoardObjInterface = {
         data : draughts.engine.data,
         history: draughts.history
     }
@@ -70,7 +71,7 @@ export async function findGamesfromUser(user_id: number): Promise<any> {
 
 //aggiorna nella tabella game la colonna storico
 export async function updateDb(game_id: number, draughts: any): Promise<any> {
-    const newGameState = {
+    const newGameState: BoardObjInterface = {
         data : draughts.engine.data,
         history: draughts.history
     }

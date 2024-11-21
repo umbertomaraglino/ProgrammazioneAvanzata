@@ -43,7 +43,7 @@ export const getState = async (req: Request,res: Response) => {
   const user = await getUserFromJwt(req);
   const stato = await findState(user[0].dataValues.user_id);
   if(stato){
-    return res.status(200).json(stato);
+    return res.status(200).json({stato: stato});
   }
   else {
     res.status(500).json({ message: "impossibile avere lo stato" });
