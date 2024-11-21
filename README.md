@@ -122,7 +122,7 @@ In caso di successo della richiesta si otterrà:
 Di seguito verranno elencati i pattern utilzizati e le motivazioni
 
 ### MVC
-Nel pattern MVC, le rotte sono un punto di ingresso che instrada le richieste verso il componente appropriato del sistema. Le rotte mappano gli URL a specifici controller, che si trovano nella parte Controller del pattern. Quando un utente invia una richiesta HTTP, il router analizza l'URL e decide quale controller e quale azione richiamare. Questo controller, a sua volta, interagisce con il modello per recuperare i dati necessari e con la vista per renderizzarli.
+Nel pattern MVC, le rotte sono un punto di ingresso che instrada le richieste verso il componente appropriato del sistema. Le rotte mappano gli URL a specifici controller, che si trovano nella parte Controller del pattern. Quando un utente invia una richiesta HTTP, il router analizza l'URL e decide quale controller e quale azione richiamare. Questo controller, a sua volta, interagisce con il modello per recuperare i dati necessari e con la vista per renderizzarli. In questo progetto, dal momento che è richiesto solo un beckend non c'e la vista.
 
 ![MVC](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/MVC.png)
 
@@ -137,8 +137,6 @@ Quando il controller ha bisogno di accedere ai dati, utilizza il modello, il qua
 La Chain of Responsibility si realizza nei middleware, che sono componenti indipendenti che si occupano di controlli specifici lungo il flusso di una richiesta. Quando una richiesta arriva all'applicazione, passa attraverso una catena di middleware, ognuno dei quali può elaborarla, modificarla o decidere di fermarla.
 
 Ad esempio, un middleware potrebbe controllare l'autenticazione, un altro la validità dei dati della richiesta, e un altro ancora i permessi. Se uno di questi middleware rileva un problema, blocca la catena e restituisce immediatamente una risposta all'utente. In caso contrario, la richiesta viene inoltrata al middleware successivo fino a raggiungere il controller.
-
-Questa struttura consente di mantenere il codice modulare e riutilizzabile, dato che ogni middleware ha una responsabilità ben definita.
 
 ![chain](https://github.com/umbertomaraglino/ProgrammazioneAvanzata/blob/main/Immagini/chain.png)
 
